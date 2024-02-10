@@ -1,1 +1,1 @@
-Hello, GitHub!
+Personal NVIM Configuration using LazyVim
