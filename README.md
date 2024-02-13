@@ -1,4 +1,3 @@
-# 💤 LazyVim
+# 💤 Almighty lazy.nvim Config
+A basic config created for general purpose using the plugin manager [Lazy](https://github.com/folke/lazy.nvim).
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
