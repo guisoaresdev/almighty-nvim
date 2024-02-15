@@ -1,15 +1,28 @@
 return {-- Mason
-    { "williamboman/mason.nvim", cmd = "mason"},
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    { "williamboman/mason.nvim", cmd = "Mason",
     config = function()
         require("mason").setup{
-            registries = { "lua:my-registry", "github:mason-org/mason-registry", },
+            registries = { "github:mason-org/mason-registry", },
         }
-        require("mason-lspconfig").setup({
-            ensure_installed = {"clangd", "csharp_ls", "cmake", "cssls",
-            "dockerls", "eslint", "gradle_ls", "html", "jsonls", "jdtls",
-            "tsserver", "marksman", "sqlls" }
-            })
-    end
+        end,
+    },
+    {"williamboman/mason-lspconfig.nvim",
+    config = function()
+            require("mason-lspconfig").setup{
+            ensure_installed = {
+                    "bashls",
+                    "clangd",
+                    "cssls",
+                    "html",
+                    "tsserver",
+                    "dockerls",
+                    "gradle_ls",
+                    "jsonls",
+                    "jdtls",
+                    "marksman",
+                    "sqlls"
+                }
+            }
+        end,
+    },
 }
